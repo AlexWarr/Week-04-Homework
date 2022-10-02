@@ -61,7 +61,7 @@ public class JavaWeeks3_4_Coding_Assignment {
 				
 	//5.	Create a new array of int called nameLengths. Write a loop to iterate over the previously created names array and add the length of each name to the nameLengths array.
 				int[] nameLengths = nameLenArr(names);
-				System.out.println("This is an array of name langths in names: ");
+				System.out.println("This is an array of name lengths in names: ");
 				printIArray(nameLengths);
 				
 	//6.	Write a loop to iterate over the nameLengths array and calculate the sum of all the elements in the array. Print the result to the console.
@@ -95,18 +95,19 @@ public class JavaWeeks3_4_Coding_Assignment {
 				double testArr[] = conv2Dub(na);
 				System.out.println("This is another array of prices: ");
 				printDArray(testArr);
-				System.out.println("The average of the first array of prices is greater than the avarage of the other array: ");
+				System.out.println("true or false: The average of the first array of prices is greater than the average of the other array: ");
 				System.out.println(firstIsGreater(prices,testArr));
 				
 	//12.	Write a method called willBuyDrink that takes a boolean isHotOutside, and a double moneyInPocket, and returns true if it is hot outside and if moneyInPocket is greater than 10.50.
-				System.out.println("Is it hot outside?");
+				System.out.println("This method will help to determine whether I will buy a drink");
+				System.out.println("true or false: It is hot outside");
 				boolean isHotOutside = Boolean.parseBoolean(kb.nextLine());
 				System.out.println("How much money do I have?");
 				double moneyInPocket = Double.parseDouble(kb.nextLine());
 				System.out.println("I will buy a drink: " + willBuyDrink(isHotOutside, moneyInPocket));
 				
 	//13.	Create a method of your own that solves a problem. In comments, write what the method does and why you created it.
-				//This method is designed to determine how many cartons a farmer will need for his eggs
+				System.out.println("This method is designed to determine how many cartons a farmer will need for his eggs");
 				//this methods will print the response and return nothing 
 				System.out.println("How many eggs did your hens lay today? ");
 				int eggs = Integer.parseInt(kb.nextLine());
@@ -146,8 +147,11 @@ public class JavaWeeks3_4_Coding_Assignment {
 		int avg = 0;
 		for (String name : e) {
 			avg += name.length();
+			//System.out.println(name);
 		}
-		avg += e.length;
+		//System.out.println(avg);
+		avg = avg/e.length;
+		//System.out.println(avg);
 		return avg;
 	}
 	public static String list2String(String[] f) {
